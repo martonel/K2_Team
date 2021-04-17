@@ -1,26 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.FXMLController">
    <children>
-      <Text layoutX="316.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
+      <ImageView fitHeight="501.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/white.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="360.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
-      <Text layoutX="110.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név" />
-      <Text layoutX="109.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
-      <Text layoutX="109.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím" />
-      <Text layoutX="110.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím" />
-      <Text layoutX="109.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
-      <TextField layoutX="322.0" layoutY="54.0" />
-      <TextField layoutX="322.0" layoutY="86.0" />
-      <TextField layoutX="322.0" layoutY="125.0" />
-      <TextField layoutX="322.0" layoutY="163.0" />
-      <TextField layoutX="322.0" layoutY="200.0" />
+      <Text layoutX="110.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név" />
+      <Text layoutX="109.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
+      <Text layoutX="110.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím" />
+      <Text layoutX="109.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím" />
+      <Text layoutX="110.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
+      <TextField layoutX="322.0" layoutY="76.0" />
+      <TextField layoutX="321.0" layoutY="124.0" />
+      <TextField layoutX="323.0" layoutY="171.0" />
+      <TextField layoutX="323.0" layoutY="216.0" />
+      <TextField layoutX="322.0" layoutY="261.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/deliver.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
