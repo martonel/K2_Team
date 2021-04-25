@@ -1,4 +1,4 @@
-package hu.unideb.inf;
+package Controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -10,11 +10,28 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import Model.Database;
 
 public class FXMLController {
+    
+    @FXML
+    private TextField nameText;
+    
+    @FXML
+    private TextField addressText;
+
+    @FXML
+    private TextField billingAddressText;
+
+    @FXML
+    private TextField phonNumText;
+
+    @FXML
+    private TextField commentText;
 
     @FXML
     private Button log;
+    
     @FXML
     void login(ActionEvent event) {
         try {
@@ -30,4 +47,20 @@ public class FXMLController {
         
     }
 
+    public String getDatas(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(nameText.getText());
+        sb.append(",");
+        sb.append(addressText.getText());
+        sb.append(",");
+        sb.append(billingAddressText.getText());
+        sb.append(",");
+        sb.append(phonNumText.getText());
+        sb.append(",");
+        sb.append(commentText.getText());
+        
+        return sb.toString();
+    }
+    
+    
 }

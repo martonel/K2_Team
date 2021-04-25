@@ -1,2 +1,3 @@
-hu\unideb\inf\MainApp.class
-hu\unideb\inf\FXMLController.class
+Controller\MainApp.class
+Model\Database.class
+Controller\FXMLController.class
