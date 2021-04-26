@@ -1,4 +1,4 @@
-package Controller;
+package hu.unideb.inf;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;

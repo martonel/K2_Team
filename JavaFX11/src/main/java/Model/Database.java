@@ -5,7 +5,8 @@
  */
 package Model;
 
-import Controller.FXMLController;
+import hu.unideb.inf.FXMLController;
+
 
 
 /**
@@ -13,11 +14,7 @@ import Controller.FXMLController;
  * @author Dani
  */
 public class Database {
-    FXMLController fxmlcont = new FXMLController();
-    String datas = fxmlcont.getDatas();
-    
-    //Ide jön a fájlbaírás
-    //a datas stringben már benne van, csak be kell írni a fájlba
-    
+    FXMLController data = new FXMLController();
+    String sor = data.datas();
     
 }
