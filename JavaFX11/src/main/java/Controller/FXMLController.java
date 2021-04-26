@@ -1,4 +1,4 @@
-package hu.unideb.inf;
+package Controller;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -10,12 +10,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import static Model.Database.intoTheTXT;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FXMLController {
-
-   @FXML
+    
+    @FXML
     private TextField nameText;
-
+    
     @FXML
     private TextField addressText;
 
@@ -23,14 +27,14 @@ public class FXMLController {
     private TextField billingAddressText;
 
     @FXML
-    private TextField phoneNumText;
+    private TextField phonNumText;
 
     @FXML
     private TextField commentText;
-    
-    
+
     @FXML
     private Button log;
+    
     @FXML
     void login(ActionEvent event) {
         try {
@@ -46,13 +50,31 @@ public class FXMLController {
         
     }
     
-    public String datas(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(nameText.getText());
-        
-        return sb.toString();
-        
+    @FXML
+    void sendButton(ActionEvent event) {
+        String datas = getDatas();
+        System.out.println(datas);
+        try {
+            intoTheTXT(datas);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
+    public String getDatas(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(nameText.getText());
+        sb.append(",");
+        sb.append(addressText.getText());
+        sb.append(",");
+        sb.append(billingAddressText.getText());
+        sb.append(",");
+        sb.append(phonNumText.getText());
+        sb.append(",");
+        sb.append(commentText.getText());
+        
+        return sb.toString();
+    }
+    
+    
 }
-
