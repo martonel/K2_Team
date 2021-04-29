@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import static Model.Database.intoTheTXT;
+import static Model.Database.textFromtheTXT;
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,6 +44,9 @@ public class FXMLController {
             stage.setTitle("Hallgato");
             stage.setScene(new Scene(parent));
             stage.show();
+            //a textFromtheTXT eljáráshívás csak tesztként van benne, 
+            //majd ha lesz hely ahová meg lehet jeleníteni innen ki lehet majd venni
+            textFromtheTXT();
             //stage.setOnCloseRequest(e -> handleExit(false, e));
         } catch (IOException e) {
             System.out.println(e);
@@ -63,15 +67,44 @@ public class FXMLController {
 
     public String getDatas(){
         StringBuilder sb = new StringBuilder();
-        sb.append(nameText.getText());
+        if(nameText.getText().isEmpty()){
+            sb.append("unknown");
+        }
+        else{
+            sb.append(nameText.getText());
+        }
+        
         sb.append(",");
-        sb.append(addressText.getText());
+        if(addressText.getText().isEmpty()){
+            sb.append("unknown");
+        }
+        else{
+            sb.append(addressText.getText());
+        }
+        
         sb.append(",");
-        sb.append(billingAddressText.getText());
+        if(billingAddressText.getText().isEmpty()){
+            sb.append("unknown");
+        }
+        else{
+            sb.append(billingAddressText.getText());
+        }
+        
         sb.append(",");
-        sb.append(phonNumText.getText());
+        if(phonNumText.getText().isEmpty()){
+            sb.append("unknown");
+        }
+        else{
+            sb.append(phonNumText.getText());
+        }
+        
         sb.append(",");
-        sb.append(commentText.getText());
+        if(commentText.getText().isEmpty()){
+            sb.append("unknown");
+        }
+        else{
+            sb.append(commentText.getText());
+        }
         
         return sb.toString();
     }

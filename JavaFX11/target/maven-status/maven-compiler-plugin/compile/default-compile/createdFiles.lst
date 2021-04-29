@@ -1,3 +1,4 @@
 Controller\MainApp.class
 Model\Database.class
+Model\lstHelper.class
 Controller\FXMLController.class
