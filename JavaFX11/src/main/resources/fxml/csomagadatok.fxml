@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLController">
    <children>
       <ImageView fitHeight="501.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -30,17 +30,18 @@
             <Image url="@../styles/deliver.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="485.0" layoutY="298.0" mnemonicParsing="false" text="Törlés" />
+      <Button layoutX="485.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteButton" text="Törlés" />
       <Text layoutX="36.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Csomagazonosító" />
-      <TextField layoutX="143.0" layoutY="30.0" />
+      <TextField fx:id="azonGetter" layoutX="143.0" layoutY="30.0" />
       <Button layoutX="299.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleGetPackageData" text="Lekérés" />
       <Text layoutX="109.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Státusz" />
-      <Text layoutX="347.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A csomag státusza" />
-      <Text layoutX="347.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett címe" />
-      <Text layoutX="347.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szállítási cím" />
-      <Text layoutX="347.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
-      <Text layoutX="347.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés" />
-      <Text layoutX="347.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve" />
+      <Text fx:id="packageStatus" layoutX="347.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A csomag státusza" />
+      <Text fx:id="packageAddr" layoutX="347.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett címe" />
+      <Text fx:id="packageBillingAddr" layoutX="347.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szállítási cím" />
+      <Text fx:id="packagePhone" layoutX="347.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
+      <Text fx:id="packageName" layoutX="347.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve" />
+      <Text fx:id="packageComm" layoutX="347.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés" />
       <Button fx:id="bezar" layoutX="370.0" layoutY="371.0" mnemonicParsing="false" onAction="#backButton" text="Vissza" />
+      <Text fx:id="errorMess2" layoutX="178.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nincs ilyen azonosító!" visible="false" />
    </children>
 </AnchorPane>

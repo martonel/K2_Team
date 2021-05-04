@@ -1,4 +1,6 @@
-Nagy Péter,unknown,unknown,0631,unknown
-Nagy Péter,valami,unknown,unknown,unknown
-Kiss Dániel,nincs,nincs,unknown,Csomagold be szépen
-ÁÁÁÁÁÁÁÁÁÁ,unknown,unknown,unknown,unknown
+20414,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+20405,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+41592,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+16177,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+50004,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+37860,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
