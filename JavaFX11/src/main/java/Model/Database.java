@@ -178,6 +178,54 @@ public class Database {
             del = true;
         return del;
     }
+    public static void modify(String azon, String status){
+        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        ArrayList<String> lst = new ArrayList<>();
+        boolean del = true;
+        //int counter = 0;
+        try {
+            Scanner sc = new Scanner(op, "UTF-8");
+            while(sc.hasNextLine()){
+                String s = sc.nextLine();
+                if(!s.contains(azon)){
+                    lst.add(s);
+                }
+                else{
+                    String[] tmp = s.split(",");
+                    tmp[6] = status;
+                    s = tmp[0] + "," + tmp[1] + "," + tmp[2] + "," + tmp[3] + "," + tmp[4] + "," + tmp[5] + "," + tmp[6];
+                    lst.add(s);
+                }
+                //counter++;
+            }
+            sc.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        File file = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        PrintWriter pw;
+        try {
+            //FileWriter fw = new FileWriter(file, Charset.forName("utf-8"), true);
+            pw = new PrintWriter(file, Charset.forName("utf-8"));
+            for(int i = 0; i < lst.size(); i++){
+                    pw.println(lst.get(i));
+            }
+            pw.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        /*if(counter == lst.size())
+            del = false;
+        else
+            del = true;
+        
+        /*if(counter == lst.size())
+            del = false;
+        else
+            del = true;
+        return del;*/
+    }
     
     public static String textFromtheTXT(String azon){
         File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");

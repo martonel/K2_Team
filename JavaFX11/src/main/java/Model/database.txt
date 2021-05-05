@@ -1,6 +1,9 @@
-20414,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-20405,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-41592,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-16177,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-50004,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-37860,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+6283,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
+6287,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+6288,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+6289,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
+44112,Nagy Béla,Híd,Híd,nincs,Nincs,Kézbesítve
+31622,Dávid Dávid,Debrecen,Debrecen,unknown,Nincs,Kézbesítve
+46235,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
+36676,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
+31274,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt

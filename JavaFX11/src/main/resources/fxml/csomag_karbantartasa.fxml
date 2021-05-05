@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.csomagKarbanController">
    <children>
       <Text layoutX="360.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
          <font>
@@ -33,7 +33,7 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets></ChoiceBox>
-      <Button layoutX="326.0" layoutY="344.0" mnemonicParsing="false" text="Módosít" />
+      <Button layoutX="326.0" layoutY="344.0" mnemonicParsing="false" onAction="#packageModify" text="Módosít" />
       <Button layoutX="268.0" layoutY="30.0" mnemonicParsing="false" onAction="#packageMaintenance" text="Lekér" />
       <TextField fx:id="azonGetter" layoutX="112.0" layoutY="30.0" />
       <Text fx:id="packageName" layoutX="293.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve" />
