@@ -6,15 +6,11 @@
 package Model;
 
 import Controller.FXMLController;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.io.Writer;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -102,6 +98,11 @@ class lstHelper{
 }
 
 public class Database {
+    
+    public static File FileOpening(){
+        return new File("D:\\Suli\\SFM\\K2_Team1\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+    }
+    
     FXMLController fxmlcont = new FXMLController();
     
     
@@ -109,7 +110,7 @@ public class Database {
         PrintWriter pw = null;
 
         try {
-           File file = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+           File file = FileOpening();
            FileWriter fw = new FileWriter(file, Charset.forName("utf-8"), true);
            pw = new PrintWriter(fw);
            pw.println(datas);
@@ -122,7 +123,7 @@ public class Database {
     }
     
     public static boolean randomNumIsIn(int randomNum){
-        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op = FileOpening();
         try {
             Scanner sc = new Scanner(op, "UTF-8");
             String[] sp;
@@ -142,7 +143,7 @@ public class Database {
     }
     
     public static boolean delete(String azon){
-        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op = FileOpening();
         ArrayList<String> lst = new ArrayList<>();
         boolean del = true;
         int counter = 0;
@@ -159,7 +160,7 @@ public class Database {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File file = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File file = FileOpening();
         PrintWriter pw;
         try {
             //FileWriter fw = new FileWriter(file, Charset.forName("utf-8"), true);
@@ -179,7 +180,7 @@ public class Database {
         return del;
     }
     public static void modify(String azon, String status){
-        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op = FileOpening();
         ArrayList<String> lst = new ArrayList<>();
         boolean del = true;
         //int counter = 0;
@@ -202,7 +203,7 @@ public class Database {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
-        File file = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File file = FileOpening();
         PrintWriter pw;
         try {
             //FileWriter fw = new FileWriter(file, Charset.forName("utf-8"), true);
@@ -228,7 +229,7 @@ public class Database {
     }
     
     public static String textFromtheTXT(String azon){
-        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op = FileOpening();
         HashMap<String, ArrayList<lstHelper>> mp = new HashMap<>();
         
         String back = "";

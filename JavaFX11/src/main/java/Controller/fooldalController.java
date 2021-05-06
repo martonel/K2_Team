@@ -42,6 +42,17 @@ public class fooldalController {
     @FXML
     private Button kuldes;
 
+    
+    @FXML
+    private Button bezar;
+    
+    
+    @FXML
+    void backButton(ActionEvent event) {
+        Stage stage = (Stage) bezar.getScene().getWindow();
+        stage.close();
+    }
+    
     @FXML
     void elkuld(ActionEvent event) {
         Stage stage2 = (Stage) kuldes.getScene().getWindow();
@@ -56,7 +67,10 @@ public class fooldalController {
             Parent parent = FXMLLoader.load(getClass().getResource("/fxml/csomagazon.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Csomag adatai");
-            stage.setScene(new Scene(parent));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add("/styles/Styles_1.css");
+            
+            stage.setScene(scene);
             stage.show();
            
         } catch (IOException e) {

@@ -11,8 +11,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 public class csomagAzonController {
     
@@ -21,15 +26,19 @@ public class csomagAzonController {
 
     @FXML
     private Text csomagStatusz;
+    
+    @FXML
+    private Button bezar;
 
     @FXML
     private void initialize(){
         csomagAzonosito.setText(azon());
+        
         csomagStatusz.setText("Rendelés feldolgozás alatt");
     }
 
     public static String azon(){
-        File op = new File("C:\\Users\\kolom\\Downloads\\K2K2\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op =  new File("D:\\Suli\\SFM\\K2_Team1\\JavaFX11\\src\\main\\java\\Model\\database.txt");
         ArrayList<String> lst = new ArrayList<>();
         String az = "";
         try {
@@ -45,5 +54,12 @@ public class csomagAzonController {
             Logger.getLogger(csomagAzonController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return az;
+    }
+    
+    
+    @FXML
+    void backButton(ActionEvent event) {
+        Stage stage = (Stage) bezar.getScene().getWindow();
+        stage.close();
     }
 }

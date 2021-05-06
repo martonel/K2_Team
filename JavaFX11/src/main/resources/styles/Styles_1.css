@@ -1,6 +1,8 @@
+
 *{    
     primary_text_color: #212121;
     def_pri_color: #616161;
+   
 }
 @font-face {
     src: url('Roboto.ttf');
@@ -8,11 +10,10 @@
 
 
 .button {
-    -fx-font-weight: bold;
     -fx-font-family: 'Roboto';
-    -fx-font-color: #FF0000;
+    -fx-font-weight: bold;
     -fx-text-fill: secondary-text-color;
     -fx-padding: 5;
-    -fx-background-color: def_pri_color;
+    -fx-background-color:#E7BB41;
     -fx-background-radius: 8;
 }

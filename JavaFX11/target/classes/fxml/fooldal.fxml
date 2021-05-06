@@ -8,33 +8,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.fooldalController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.fooldalController">
    <children>
       <ImageView fitHeight="501.0" fitWidth="720.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../styles/white.png" />
+            <Image url="@../styles/db37e2cd1e1aa39c7ae28da090b2fe44.jpg" />
          </image>
       </ImageView>
-      <Text layoutX="360.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
+      <ImageView fitHeight="309.0" fitWidth="419.0" layoutX="154.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/yellow_background.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="316.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
-      <Text layoutX="110.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név" />
-      <Text layoutX="109.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
-      <Text layoutX="110.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím" />
-      <Text layoutX="109.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím" />
-      <Text layoutX="110.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
-      <TextField fx:id="nameText" layoutX="322.0" layoutY="76.0" />
-      <TextField fx:id="addressText" layoutX="321.0" layoutY="124.0" />
-      <TextField fx:id="billingAddressText" layoutX="323.0" layoutY="171.0" />
-      <TextField fx:id="phonNumText" layoutX="323.0" layoutY="216.0" />
-      <TextField fx:id="commentText" layoutX="322.0" layoutY="261.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="537.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+      <Text layoutX="180.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név:" />
+      <Text layoutX="180.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak :" />
+      <Text layoutX="180.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím :" />
+      <Text layoutX="180.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím:" />
+      <Text layoutX="180.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám :" />
+      <TextField fx:id="nameText" layoutX="370.0" layoutY="160.0" />
+      <TextField fx:id="addressText" layoutX="370.0" layoutY="200.0" />
+      <TextField fx:id="billingAddressText" layoutX="370.0" layoutY="240.0" />
+      <TextField fx:id="phonNumText" layoutX="370.0" layoutY="280.0" />
+      <TextField fx:id="commentText" layoutX="370.0" layoutY="320.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../styles/deliver.jpg" />
+            <Image url="@../styles/packet1.png" />
          </image>
       </ImageView>
-      <Button fx:id="kuldes" layoutX="370.0" layoutY="338.0" mnemonicParsing="false" onAction="#elkuld" text="Küldés" />
+      <Button fx:id="kuldes" layoutX="373.0" layoutY="386.0" mnemonicParsing="false" onAction="#elkuld" text="Küldés" textFill="WHITE" />
+      <Button fx:id="bezar" layoutX="286.0" layoutY="386.0" mnemonicParsing="false" onAction="#backButton" text="Vissza" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
    </children>
 </AnchorPane>

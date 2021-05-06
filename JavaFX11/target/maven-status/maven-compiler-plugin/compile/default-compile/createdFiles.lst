@@ -1,8 +1,8 @@
 Model\Database.class
 Controller\csomagAdatokController.class
-Controller\fooldalController.class
 Controller\MainApp.class
 Controller\csomagAzonController.class
-Controller\csomagKarbanController.class
 Model\lstHelper.class
 Controller\FXMLController.class
+Controller\fooldalController.class
+Controller\csomagKarbanController.class

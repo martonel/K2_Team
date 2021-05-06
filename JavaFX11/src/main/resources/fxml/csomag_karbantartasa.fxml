@@ -10,37 +10,51 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.csomagKarbanController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.csomagKarbanController">
    <children>
-      <Text layoutX="360.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok">
+      <ImageView fitHeight="496.0" fitWidth="730.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/db37e2cd1e1aa39c7ae28da090b2fe44.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="258.0" fitWidth="342.0" layoutX="183.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/yellow_background.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="310.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adatok" textAlignment="CENTER">
          <font>
             <Font size="28.0" />
          </font>
       </Text>
-      <Text layoutX="140.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név" />
-      <Text layoutX="138.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
-      <Text layoutX="139.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím" />
-      <Text layoutX="140.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím" />
-      <Text layoutX="139.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="570.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../styles/deliver.jpg" />
-         </image>
-      </ImageView>
-      <Text layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Csomag azonosító" />
-      <Text layoutX="142.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Státusz" />
-      <ChoiceBox fx:id="Statusz" layoutX="275.0" layoutY="281.0" prefWidth="150.0" styleClass="ó">
+      <Text layoutX="190.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Név :" />
+      <Text layoutX="190.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak :" />
+      <Text layoutX="190.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Számlázási cím :" />
+      <Text layoutX="190.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cím :" />
+      <Text layoutX="190.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonszám :" />
+      <Text fill="WHITE" layoutX="22.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Csomag azonosító :" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Text layoutX="190.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Státusz :" />
+      <ChoiceBox fx:id="Statusz" layoutX="360.0" layoutY="279.0" prefWidth="150.0" styleClass="ó">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></ChoiceBox>
-      <Button layoutX="326.0" layoutY="344.0" mnemonicParsing="false" onAction="#packageModify" text="Módosít" />
-      <Button layoutX="268.0" layoutY="30.0" mnemonicParsing="false" onAction="#packageMaintenance" text="Lekér" />
-      <TextField fx:id="azonGetter" layoutX="112.0" layoutY="30.0" />
-      <Text fx:id="packageName" layoutX="293.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve" />
-      <Text fx:id="packageAddr" layoutX="293.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feladó címe" />
-      <Text fx:id="packagePhone" layoutX="293.0" layoutY="213.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett telefonszáma" />
-      <Text fx:id="packageComm" layoutX="293.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
-      <Text fx:id="packageBillingAddr" layoutX="293.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szállítási cím" />
-      <Text fx:id="errorMess" layoutX="295.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nincs ilyen azonosító!" visible="false" />
+      <Button layoutX="354.0" layoutY="354.0" mnemonicParsing="false" onAction="#packageModify" text="Módosít" textFill="WHITE" />
+      <Button layoutX="400.0" layoutY="30.0" mnemonicParsing="false" onAction="#packageMaintenance" text="Lekérés" />
+      <TextField fx:id="azonGetter" layoutX="203.0" layoutY="30.0" />
+      <Text fx:id="packageName" layoutX="360.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett neve" />
+      <Text fx:id="packageAddr" layoutX="360.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feladó címe" />
+      <Text fx:id="packagePhone" layoutX="360.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Címzett telefonszáma" />
+      <Text fx:id="packageComm" layoutX="360.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Megjegyzés a futárnak" />
+      <Text fx:id="packageBillingAddr" layoutX="360.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Szállítási cím" />
+      <Text fx:id="errorMess" fill="WHITE" layoutX="278.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nincs ilyen azonosító!" textAlignment="CENTER" visible="false" wrappingWidth="172.86133497953415" />
+      <Button fx:id="bezar" layoutX="286.0" layoutY="354.0" mnemonicParsing="false" onAction="#backButton" text="Vissza" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="541.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../styles/packet3.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

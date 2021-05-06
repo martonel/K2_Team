@@ -1,5 +1,6 @@
 package Controller;
 
+import static java.awt.SystemColor.window;
 import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,7 +28,10 @@ public class FXMLController {
             Parent parent = FXMLLoader.load(getClass().getResource("/fxml/fooldal.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Csomag feladása");
-            stage.setScene(new Scene(parent));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add("/styles/Styles_1.css");
+            
+            stage.setScene(scene);
             stage.show();
             
             //stage.setOnCloseRequest(e -> handleExit(false, e));
@@ -38,12 +42,15 @@ public class FXMLController {
 
     
     @FXML
-    void csomagokKarbantartasa(ActionEvent event) {       
+    void csomagokKarbantartasa(ActionEvent event) {
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("/fxml/csomag_karbantartasa.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("A csomagok karbantartása!");
-            stage.setScene(new Scene(parent));
+            
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add("/styles/Styles_1.css");
+            stage.setScene(scene);
             stage.show();
             
             //stage.setOnCloseRequest(e -> handleExit(false, e));
@@ -58,7 +65,10 @@ public class FXMLController {
             Parent parent = FXMLLoader.load(getClass().getResource("/fxml/csomagadatok.fxml"));
             Stage stage = new Stage(StageStyle.DECORATED);
             stage.setTitle("Csomag adatai");
-            stage.setScene(new Scene(parent));
+            Scene scene = new Scene(parent);
+            scene.getStylesheets().add("/styles/Styles_1.css");
+            
+            stage.setScene(scene);
             stage.show();
             
             

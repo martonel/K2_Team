@@ -11,9 +11,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 
 public class csomagKarbanController {
@@ -40,6 +42,10 @@ public class csomagKarbanController {
     
     @FXML
     private ChoiceBox Statusz;
+    
+    
+    @FXML
+    private Button bezar;
     
     @FXML
     private void initialize(){
@@ -80,7 +86,11 @@ public class csomagKarbanController {
             packageComm.setText(sp[5]);
         }
     }
-    
+    @FXML
+    void backButton(ActionEvent event) {
+        Stage stage = (Stage) bezar.getScene().getWindow();
+        stage.close();
+    }
     @FXML
     void packageModify(ActionEvent event) {
         if(!(azonGetter.getText().isBlank() || azonGetter.getText().isEmpty())){
