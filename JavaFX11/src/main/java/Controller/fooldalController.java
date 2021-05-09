@@ -49,6 +49,7 @@ public class fooldalController {
     
     @FXML
     void backButton(ActionEvent event) {
+        System.out.println(event);
         Stage stage = (Stage) bezar.getScene().getWindow();
         stage.close();
     }
@@ -77,10 +78,14 @@ public class fooldalController {
             System.out.println(e);
         }
     }
+    public String valamiadat(){
+        
+        return "almafamadar";
+    }
+    
     
     public String getDatas() {
         StringBuilder sb = new StringBuilder();
-
         boolean bool = true;
         int i = 0;
         while(bool){
@@ -95,39 +100,55 @@ public class fooldalController {
         
         sb.append(i);
         sb.append(",");
-        if (nameText.getText().isEmpty() || nameText.getText().isEmpty()) {
+        if(nameText == null){
+            sb.append("unknown");
+        }
+        else if ((nameText.getText().isEmpty() || nameText.getText().isEmpty())) {
             sb.append("unknown");
         } else {
             sb.append(nameText.getText());
         }
 
         sb.append(",");
-        if (addressText.getText().isEmpty() || addressText.getText().isEmpty()) {
+        if(addressText == null){
+            sb.append("unknown");
+        }
+        else if (addressText.getText().isEmpty() || addressText.getText().isEmpty()) {
             sb.append("unknown");
         } else {
             sb.append(addressText.getText());
         }
 
         sb.append(",");
-        if (billingAddressText.getText().isEmpty() || billingAddressText.getText().isEmpty()) {
+        if(billingAddressText == null){
+            sb.append("unknown");
+        }
+        else if (billingAddressText.getText().isEmpty() || billingAddressText.getText().isEmpty()) {
             sb.append("unknown");
         } else {
             sb.append(billingAddressText.getText());
         }
 
         sb.append(",");
-        if (phonNumText.getText().isEmpty() || phonNumText.getText().isEmpty()) {
+        if(phonNumText == null){
+            sb.append("unknown");
+        }
+        else if (phonNumText.getText().isEmpty() || phonNumText.getText().isEmpty()) {
             sb.append("unknown");
         } else {
             sb.append(phonNumText.getText());
         }
 
         sb.append(",");
-        if (commentText.getText().isEmpty() || commentText.getText().isEmpty()) {
+        if(commentText == null){
+            sb.append("unknown");
+        }
+        else if (commentText.getText().isEmpty() || commentText.getText().isEmpty()) {
             sb.append("Nincs");
         } else {
             sb.append(commentText.getText());
         }
+        
         sb.append(",Rendelés feldolgozás alatt");
 
         return sb.toString();
