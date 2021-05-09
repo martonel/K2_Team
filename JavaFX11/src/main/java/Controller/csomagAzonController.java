@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import static Model.Database.FileOpening;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -38,7 +39,7 @@ public class csomagAzonController {
     }
 
     public static String azon(){
-        File op =  new File("D:\\Suli\\SFM\\K2_Team1\\JavaFX11\\src\\main\\java\\Model\\database.txt");
+        File op =  FileOpening();
         ArrayList<String> lst = new ArrayList<>();
         String az = "";
         try {

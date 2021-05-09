@@ -1,6 +1,5 @@
-6287,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
 6288,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
-6289,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
+6289,unknown,unknown,unknown,unknown,Nincs,Kiszállítás alatt
 44112,Nagy Béla,Híd,Híd,nincs,Nincs,Kézbesítve
 31622,Dávid Dávid,Debrecen,Debrecen,unknown,Nincs,Kézbesítve
 46235,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
