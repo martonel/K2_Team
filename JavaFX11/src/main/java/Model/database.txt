@@ -19,3 +19,4 @@
 41923,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
 39647,unknown,unknown,unknown,unknown,Nincs,Kézbesítve
 23956,unknown,unknown,unknown,unknown,Nincs,Rendelés feldolgozás alatt
+47101,Anna,Nefelejts u.,unknown,unknown,Nincs,Rendelés feldolgozás alatt

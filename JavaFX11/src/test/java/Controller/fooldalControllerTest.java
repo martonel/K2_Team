@@ -65,19 +65,19 @@ public class fooldalControllerTest {
         
     }
 
-    /**
+    /*
      * Test of getDatas method, of class fooldalController.
      */
     @Test
     public void testGetDatas() {
-        System.out.println("getDatas");
+        System.out.println("getDatasT");
         fooldalController instance = new fooldalController();
         String sor = instance.getDatas();
         System.out.println(sor);
         
         String[] sor2 = sor.split(",");
         String res = sor2[1]+","+ sor2[2]+","+ sor2[3]+","+ sor2[4]+","+ sor2[5]+","+ sor2[6];
-        System.out.println(res);
+        //System.out.println(res);
         String expResult = "unknown,unknown,unknown,unknown,unknown,Rendelés feldolgozás alatt";
         //String result = instance.getDatas();
         assertEquals(expResult, res);
